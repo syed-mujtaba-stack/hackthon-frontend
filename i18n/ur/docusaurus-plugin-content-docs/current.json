@@ -1,0 +1,14 @@
+{
+  "title.sidebar.tutorialSidebar": {
+    "message": "ٹیوٹوریل",
+    "description": "The title of tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Tutorial - Basics": {
+    "message": "ٹیوٹوریل - بنیادیات",
+    "description": "The label for category Tutorial - Basics in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Tutorial - Extras": {
+    "message": "ٹیوٹوریل - اضافی",
+    "description": "The label for category Tutorial - Extras in sidebar tutorialSidebar"
+  }
+}

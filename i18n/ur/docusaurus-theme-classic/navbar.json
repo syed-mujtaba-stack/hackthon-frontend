@@ -1,0 +1,66 @@
+{
+    "theme.ErrorPageContent.title": {
+        "message": "یہ صفحہ کریش ہو گیا۔",
+        "description": "The title of the fallback page when the page crashed"
+    },
+    "theme.NotFound.title": {
+        "message": "صفحہ نہیں ملا",
+        "description": "The title of the 404 page"
+    },
+    "theme.NotFound.p1": {
+        "message": "ہم وہ نہیں ڈھونڈ سکے جو آپ تلاش کر رہے تھے۔",
+        "description": "The first paragraph of the 404 page"
+    },
+    "theme.NotFound.p2": {
+        "message": "براہ کرم سائٹ کے مالک سے رابطہ کریں جس نے آپ کو اصل URL سے جوڑا اور انہیں بتائیں کہ ان کا لنک ٹوٹا ہوا ہے۔",
+        "description": "The 2nd paragraph of the 404 page"
+    },
+    "theme.navbar.mobileLanguageDropdown.label": {
+        "message": "زبانیں",
+        "description": "The label for the mobile language switcher dropdown"
+    },
+    "theme.TOCCollapsible.toggleButtonLabel": {
+        "message": "اس صفحے پر",
+        "description": "The label used by the button on the collapsible TOC component"
+    },
+    "theme.docs.sidebar.collapseButtonTitle": {
+        "message": "سائیڈبار چھوٹا کریں",
+        "description": "The title attribute for collapse button of doc sidebar"
+    },
+    "theme.docs.sidebar.expandButtonTitle": {
+        "message": "سائیڈبار بڑا کریں",
+        "description": "The title attribute for expand button of doc sidebar"
+    },
+    "theme.common.skipToMainContent": {
+        "message": "مرکزی مواد پر جائیں",
+        "description": "The skip to content label used for accessibility"
+    },
+    "theme.blog.post.readMore": {
+        "message": "مزید پڑھیں",
+        "description": "The label used in blog post item excerpts to link to full blog posts"
+    },
+    "theme.docs.paginator.navAriaLabel": {
+        "message": "دستاویزات صفحات نیویگیشن",
+        "description": "The ARIA label for the docs pagination"
+    },
+    "theme.docs.paginator.previous": {
+        "message": "پچھلا",
+        "description": "The label used to navigate to the previous doc"
+    },
+    "theme.docs.paginator.next": {
+        "message": "اگلا",
+        "description": "The label used to navigate to the next doc"
+    },
+    "theme.colorToggle.ariaLabel": {
+        "message": "ڈارک موڈ اور لائٹ موڈ کے درمیان تبدیل کریں (فی الحال {mode})",
+        "description": "The ARIA label for the navbar color mode toggle"
+    },
+    "theme.colorToggle.ariaLabel.mode.dark": {
+        "message": "ڈارک موڈ",
+        "description": "The name for the dark color mode"
+    },
+    "theme.colorToggle.ariaLabel.mode.light": {
+        "message": "لائٹ موڈ",
+        "description": "The name for the light color mode"
+    }
+}

@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Animated gradient background -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1">
+        <animate attributeName="stop-color" values="#0f172a; #1e293b; #0f172a" dur="3s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1">
+        <animate attributeName="stop-color" values="#1e293b; #0a0a0a; #1e293b" dur="3s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <!-- Orange glow gradient -->
+    <radialGradient id="orangeGlow">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#dc2626;stop-opacity:0"/>
+    </radialGradient>
+    
+    <!-- Blue glow gradient -->
+    <radialGradient id="blueGlow">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#2563eb;stop-opacity:0"/>
+    </radialGradient>
+    
+    <!-- Filter for glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background circle with animation -->
+  <circle cx="100" cy="100" r="95" fill="url(#bgGrad)" opacity="0.9"/>
+  
+  <!-- Outer rotating ring (orange) -->
+  <circle cx="100" cy="100" r="85" fill="none" stroke="#f97316" stroke-width="2" opacity="0.6" stroke-dasharray="10 5">
+    <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="8s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Inner rotating ring (blue) - opposite direction -->
+  <circle cx="100" cy="100" r="75" fill="none" stroke="#3b82f6" stroke-width="2" opacity="0.6" stroke-dasharray="5 10">
+    <animateTransform attributeName="transform" type="rotate" from="360 100 100" to="0 100 100" dur="6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Robot head base -->
+  <g filter="url(#glow)">
+    <!-- Head -->
+    <rect x="65" y="55" width="70" height="85" rx="15" fill="#1a1a1a" stroke="#f97316" stroke-width="3"/>
+    
+    <!-- Antenna -->
+    <line x1="100" y1="55" x2="100" y2="40" stroke="#3b82f6" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="100" cy="35" r="5" fill="#3b82f6">
+      <animate attributeName="opacity" values="1; 0.3; 1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Eyes (animated) -->
+    <circle cx="82" cy="85" r="8" fill="#3b82f6">
+      <animate attributeName="fill" values="#3b82f6; #60a5fa; #3b82f6" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="118" cy="85" r="8" fill="#3b82f6">
+      <animate attributeName="fill" values="#3b82f6; #60a5fa; #3b82f6" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Eye glow -->
+    <circle cx="82" cy="85" r="12" fill="url(#blueGlow)" opacity="0.5">
+      <animate attributeName="opacity" values="0.3; 0.7; 0.3" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="118" cy="85" r="12" fill="url(#blueGlow)" opacity="0.5">
+      <animate attributeName="opacity" values="0.3; 0.7; 0.3" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Mouth/display panel -->
+    <rect x="80" y="110" width="40" height="15" rx="3" fill="#0a0a0a" stroke="#f97316" stroke-width="2"/>
+    
+    <!-- Animated status bars in mouth -->
+    <rect x="85" y="115" width="8" height="5" fill="#f97316" opacity="0.8">
+      <animate attributeName="opacity" values="0.3; 1; 0.3" dur="0.8s" repeatCount="indefinite" begin="0s"/>
+    </rect>
+    <rect x="96" y="115" width="8" height="5" fill="#f97316" opacity="0.8">
+      <animate attributeName="opacity" values="0.3; 1; 0.3" dur="0.8s" repeatCount="indefinite" begin="0.2s"/>
+    </rect>
+    <rect x="107" y="115" width="8" height="5" fill="#f97316" opacity="0.8">
+      <animate attributeName="opacity" values="0.3; 1; 0.3" dur="0.8s" repeatCount="indefinite" begin="0.4s"/>
+    </rect>
+  </g>
+
+  <!-- Neural network nodes (corners with connections) -->
+  <g opacity="0.7">
+    <!-- Top left -->
+    <circle cx="25" cy="25" r="4" fill="#f97316">
+      <animate attributeName="r" values="4; 6; 4" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Top right -->
+    <circle cx="175" cy="25" r="4" fill="#3b82f6">
+      <animate attributeName="r" values="4; 6; 4" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+    </circle>
+    
+    <!-- Bottom left -->
+    <circle cx="25" cy="175" r="4" fill="#3b82f6">
+      <animate attributeName="r" values="4; 6; 4" dur="2s" repeatCount="indefinite" begin="1s"/>
+    </circle>
+    
+    <!-- Bottom right -->
+    <circle cx="175" cy="175" r="4" fill="#f97316">
+      <animate attributeName="r" values="4; 6; 4" dur="2s" repeatCount="indefinite" begin="1.5s"/>
+    </circle>
+    
+    <!-- Connecting lines with animation -->
+    <line x1="25" y1="25" x2="175" y2="25" stroke="#f97316" stroke-width="1.5" opacity="0.4" stroke-dasharray="5 5">
+      <animate attributeName="stroke-dashoffset" from="0" to="10" dur="1s" repeatCount="indefinite"/>
+    </line>
+    <line x1="175" y1="25" x2="175" y2="175" stroke="#3b82f6" stroke-width="1.5" opacity="0.4" stroke-dasharray="5 5">
+      <animate attributeName="stroke-dashoffset" from="0" to="10" dur="1s" repeatCount="indefinite"/>
+    </line>
+    <line x1="175" y1="175" x2="25" y2="175" stroke="#f97316" stroke-width="1.5" opacity="0.4" stroke-dasharray="5 5">
+      <animate attributeName="stroke-dashoffset" from="0" to="10" dur="1s" repeatCount="indefinite"/>
+    </line>
+    <line x1="25" y1="175" x2="25" y2="25" stroke="#3b82f6" stroke-width="1.5" opacity="0.4" stroke-dasharray="5 5">
+      <animate attributeName="stroke-dashoffset" from="0" to="10" dur="1s" repeatCount="indefinite"/>
+    </line>
+    
+    <!-- Diagonal connections -->
+    <line x1="25" y1="25" x2="175" y2="175" stroke="#f97316" stroke-width="1" opacity="0.2">
+      <animate attributeName="opacity" values="0.1; 0.4; 0.1" dur="3s" repeatCount="indefinite"/>
+    </line>
+    <line x1="175" y1="25" x2="25" y2="175" stroke="#3b82f6" stroke-width="1" opacity="0.2">
+      <animate attributeName="opacity" values="0.1; 0.4; 0.1" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+    </line>
+  </g>
+  
+  <!-- Orbiting particles -->
+  <circle r="3" fill="#f97316" opacity="0.8">
+    <animateMotion dur="4s" repeatCount="indefinite" path="M 100,100 m -70,0 a 70,70 0 1,0 140,0 a 70,70 0 1,0 -140,0"/>
+  </circle>
+  <circle r="3" fill="#3b82f6" opacity="0.8">
+    <animateMotion dur="5s" repeatCount="indefinite" path="M 100,100 m -70,0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"/>
+  </circle>
+</svg>
