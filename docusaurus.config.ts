@@ -18,7 +18,7 @@ const config: Config = {
   url: 'https://syed-mujtaba-stack.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/Physical-AI-Humanoid-Robotics/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   organizationName: 'syed-mujtaba-stack', // GitHub username
